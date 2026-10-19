@@ -1,0 +1,168 @@
+:root {
+  --main-pink: #d63384;
+  --dark-pink: #b02a6f;
+  --light-pink: #fff5f9;
+  --text-dark: #212529;
+  --text-muted: #6c757d;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--text-dark);
+  background-color: #fef9fc;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+.navbar-brand {
+  font-weight: 700;
+}
+.navbar-dark .nav-link:hover,
+.navbar-dark .nav-link.active {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 6px;
+}
+
+/* --- CAROUSEL --- */
+.carousel-item img {
+  height: 450px;
+  object-fit: cover;
+}
+
+/* --- PRODUCTS — 3 Columns --- */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 2rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.products-grid .card {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+.products-grid .card:hover {
+  transform: translateY(-8px);
+}
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+.card-title {
+  font-weight: 700;
+}
+.card-text strong {
+  color: var(--main-pink);
+  font-size: 1.1rem;
+}
+.btn-primary {
+  background-color: var(--main-pink);
+  border-color: var(--main-pink);
+}
+.btn-primary:hover {
+  background-color: var(--dark-pink);
+  border-color: var(--dark-pink);
+}
+
+/* --- TESTIMONIES --- */
+#testimonies {
+  background-color: var(--light-pink);
+}
+#testimonies h2 {
+  color: var(--main-pink);
+  font-weight: 700;
+}
+#testimonies .card {
+  border: 1px solid #e9e9e9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* --- GALLERY — AYUSIN NA PANTAY-PANTAY ✅ --- */
+#gallery {
+  padding: 3rem 2rem;
+}
+#gallery h2 {
+  color: var(--main-pink);
+  font-weight: 700;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+#gallery .section-intro {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+#gallery .row {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 2rem !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+}
+#gallery .col-md-4 {
+  width: 100% !important;
+  margin: 0 !important;
+}
+#gallery img {
+  width: 100%;
+  height: 250px; /* Parehas na taas lahat */
+  object-fit: cover; /* Hindi magdidistort */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+#gallery img:hover {
+  transform: scale(1.03);
+}
+#gallery p {
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* --- Gallery Responsive --- */
+@media (max-width: 992px) {
+  #gallery .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  #gallery .row {
+    grid-template-columns: 1fr;
+  }
+  #gallery img {
+    height: 200px;
+  }
+}
+
+/* --- CONTACT --- */
+#contact {
+  background-color: var(--light-pink);
+}
+#contact h2 {
+  color: var(--main-pink);
+  font-weight: 700;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .carousel-item img {
+    height: 280px;
+  }
+}
